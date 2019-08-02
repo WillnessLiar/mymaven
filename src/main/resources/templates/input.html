@@ -1,0 +1,17 @@
+<!DOCTYPE html>
+<html lang="en" xmlns:th="http://www.w3.org/1999/xhtml">
+<head>
+    <meta charset="UTF-8">
+    <title>添加用户</title>
+</head>
+<body>
+
+<form th:action="@{/User/addUser}" method="post">
+    ID:<input type="text" placeholder="ID不能为空"  name="id"><font color="red" th:errors="${user.id}"></font> <br/>
+    姓名：<input type="text"  name="name"><font color="red" th:errors="${user.name}"></font><br/>
+    密码：<input type="password"  placeholder="密码不能为空" name="password"><font color="red" th:errors="${user.password}"></font><br/>
+    年龄：<input type="text"  name="age"><br/>
+    <input type="submit"  value="确认">
+</form>
+</body>
+</html>

@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html xmlns:th="http://www.thymeleaf.org">
+<head>
+    <meta http-equiv="Content-Type" content="text/html; charset=UTF-8" />
+    <title>字符串</title>
+</head>
+
+<body>
+
+<!--/*@thymesVar id="msg1" type=""*/-->        <!--加上这个没用的就不会报红-->
+<p th:text="${msg1}"></p>
+<hr/>
+i believe i can fly
+<hr/>
+<input type="text" name="hehe" th:value="${msg1}"/>
+<hr/>
+<span th:text="${#strings.contains(msg1,'d')}"></span>          <!--判断是否含有子串-->
+<span th:text="${#strings.startsWith(msg1,'666d')}"></span>     <!--判断此子串是否为开头-->
+<span th:text="${#strings.isEmpty(msg1)}"></span>               <!--判断字符串是否为空-->
+<span th:text="${#strings.endsWith(msg1,'dd')}"></span>         <!--判断此子串是否为结尾-->
+<span th:text="${#strings.length(msg1)}"></span>                <!--返回字符串长度-->
+<span th:text="${#strings.indexOf(msg1,'哈哈')+1}"></span>       <!--第一次出现的返回位置-->
+<span th:text="${#strings.substring(msg1,5)}"></span>           <!--截断前几位字符-->
+<span th:text="${#strings.substring(msg1,5,7)}"></span>         <!--截断一个范围的字符-->
+<span th:text="${#strings.toLowerCase(msg1)}"></span>           <!--英文变小写-->
+<span th:text="${#strings.toUpperCase(msg1)}"></span>           <!--英文变大写-->
+<hr/>
+<span th:text="${#dates.format(msg2)}"></span>                  <!--格式化日期，默认语言以浏览器默认为准-->
+<span th:text="${#dates.format(msg2,'yyy/MM/dd')}"></span>      <!--按照自定义格式做日期转换-->
+<span th:text="${#dates.year(msg2)}"></span>
+<span th:text="${#dates.month(msg2)}"></span>
+<hr/>
+
+
+
+
+<hr/>
+<div class="row clearfix">
+    <div class="col-md-12 column">
+        will
+        <hr/>
+        <img src="/images/6.png" height="50" width="50">
+        <hr/>
+        <img src="/images/7.png" height="50" width="50">
+        <hr/>
+        <a><img src="/images/01.jpg" alt="" height="50" width="50"></a>
+    </div>
+</div>
+
+
+</body>
+</html>
+

@@ -1,0 +1,149 @@
+<!DOCTYPE html>
+<html lang="en" xmlns:th="http://www.w3.org/1999/xhtml" xmlns="http://www.w3.org/1999/html">
+<head>
+    <meta charset="UTF-8">
+    <title>条件判断、迭代</title>
+    <link rel="stylesheet" href="/css/bootstrap.css">
+    <script type="text/javascript" src="/js/jquery-3.3.1.js"></script>
+    <script type="text/javascript" src="/js/bootstrap.js"></script>
+</head>
+<body>
+
+<a th:href="@{/User/toaddUser}">
+    <li class=" li_a">添加用户</li>
+</a>
+
+<table align='center' border='1' width="50%">
+    <tr>
+        <td align="center">id</td>
+        <td align="center">name</td>
+        <td align="center">password</td>
+        <td align="center">age</td>
+        <td align="center">操作</td>
+    </tr>
+    <tr th:each="user:${list}">
+        <td align="center" th:text="${user.id}"></td>
+        <td align="center" th:text="${user.name}"></td>
+        <td align="center" th:text="${user.password}"></td>
+        <td align="center" th:text="${user.age}"></td>
+        <td align="center" width="20%">
+            <a class="btn btn-success modiCus" th:href="@{/User/findUserById(id=${user.id})}">修改</a>
+            <!--            <a class="btn btn-success modiCus" data-toggle="modal" data-target="#UpdCusModal">修改</a>-->
+            <a class="btn btn-danger" th:href="@{/User/deleteUser(id=${user.id})}">删除</a>
+        </td>
+    </tr>
+</table>
+<a th:href="@{http://www.baidu.com}">
+    绝对路径
+</a>
+<a th:href="@{/show}">
+    相对路径
+</a>
+<a th:href="@{/show(id=1)}">
+    相对路径传参
+</a>
+
+<!--修改弹窗-->
+<!--<div class="modal fade" id="UpdCusModal" tabindex="-1" role="dialog" aria-labelledby="publicModal " aria-hidden="true">-->
+<!--    <div class="modal-dialog">-->
+<!--        <div class="modal-content">-->
+<!--            <div class="modal-header">-->
+<!--                <h4 style="text-align: center">修改用户信息</h4>-->
+<!--                <button type="button" class="close" data-dismiss="modal" aria-hidden="true">&times;</button>-->
+<!--            </div>-->
+<!--            <div class="modal-body">-->
+<!--                <div class="row margin_1">-->
+<!--                    <div class="col-lg-12 col-xs-12">-->
+<!--                        <form action="@{/User/editUser}" method="post" name="form1">-->
+<!--                            <table class="table table-responsive table-bordered table-hover p1">-->
+<!--                                <tr>-->
+<!--                                    <td align="right">-->
+<!--                                        客户ID-->
+<!--                                    </td>-->
+<!--                                    <td align="left">-->
+<!--                                        <div class="row">-->
+<!--                                            <div class="col-lg-7 col-md-7 col-sm-7 col-xs-7">-->
+<!--                                                <input class="form-control " type="text" id="crecusId" size="20"-->
+<!--                                                       disabled th:field="${user.id}">-->
+<!--                                            </div>-->
+<!--                                        </div>-->
+<!--                                    </td>-->
+<!--                                </tr>-->
+<!--                                <tr>-->
+<!--                                    <td align="right">-->
+<!--                                        姓名-->
+<!--                                    </td>-->
+<!--                                    <td align="left">-->
+<!--                                        <div class="row">-->
+<!--                                            <div class="col-lg-7 col-md-7 col-sm-7 col-xs-7">-->
+<!--                                                <input class="form-control " type="text" id="cretrueName" size="20"-->
+<!--                                                       th:field="${user.name}">-->
+<!--                                            </div>-->
+<!--                                        </div>-->
+<!--                                    </td>-->
+<!--                                </tr>-->
+<!--                                <tr>-->
+<!--                                    <td align="right">-->
+<!--                                        登录密码-->
+<!--                                    </td>-->
+<!--                                    <td align="left">-->
+<!--                                        <div class="row">-->
+<!--                                            <div class="col-lg-7 col-md-7 col-sm-7 col-xs-7">-->
+<!--                                                <input class="form-control " type="text" id="crecusPasswd" size="20"-->
+<!--                                                       th:field="${user.password}">-->
+<!--                                            </div>-->
+<!--                                        </div>-->
+<!--                                    </td>-->
+<!--                                </tr>-->
+<!--                                <tr>-->
+<!--                                    <td align="right">-->
+<!--                                        年龄-->
+<!--                                    </td>-->
+<!--                                    <td align="left">-->
+<!--                                        <div class="row">-->
+<!--                                            <div class="col-lg-7 col-md-7 col-sm-7 col-xs-7">-->
+<!--                                                <input class="form-control " type="text" id="crecusAge" size="20"-->
+<!--                                                       th:field="${user.age}">-->
+<!--                                            </div>-->
+<!--                                        </div>-->
+<!--                                    </td>-->
+<!--                                </tr>-->
+
+<!--                                <tr>-->
+<!--                                    <th colspan="2" align="center" style="text-align: center">-->
+<!--                                        <a class="btn btn-success" id="subXiugai" onclick="updCusInfo()">确认修改</a>-->
+<!--                                        <input class="btn btn-default" name="Input" type="button" value="返回"-->
+<!--                                               onClick="javascript:history.back();">-->
+<!--                                        <input name="action" type="hidden" value="201"/>-->
+<!--                                    </th>-->
+
+<!--                                </tr>-->
+<!--                            </table>-->
+<!--                        </form>-->
+<!--                    </div>-->
+<!--                </div>-->
+<!--            </div>-->
+<!--        </div>-->
+<!--    </div>-->
+<!--</div>-->
+
+<!--<script>-->
+<!--    // 进入修改员工信息界面 根据用户ID，先判断当前点击的按钮是那个用户ID-->
+<!--    $(".modicus").click(function () {-->
+<!--        var index = $(".modicus").index($(this));-->
+<!--        var cusId = $(".cusId").eq(index).text();//cusID-->
+<!--        var trueName = $(".trueName").eq(index).text();//trueName-->
+<!--        var cusPasswd = $(".cuspasswd").eq(index).text(); //passwd-->
+<!--        var cusAge = $(".cusAge").eq(index).text();//trueName-->
+<!--        $("#crecusId").val(cusId);-->
+<!--        $("#cretrueName").val(trueName);-->
+<!--        $("#crecusPasswd").val(cusPasswd);-->
+<!--        $("#crecusAge").val(cusAge);-->
+<!--    })-->
+<!--    ;-->
+
+<!--</script>-->
+
+
+</body>
+</html>
