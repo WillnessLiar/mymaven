@@ -36,6 +36,15 @@ public class UserController {
 //        return "listUser";
 //    }
 
+    //    显示用户
+    @RequestMapping("/findUserAll")
+    public String findUserAll(Model model) {
+        List<User>list = this.userService.findUserAll();
+        model.addAttribute("list", list);
+        return "demo1" ;
+    }
+
+
 //    进入添加页面
     @RequestMapping("/toaddUser")
     public String toaddUser(User user) {
@@ -55,13 +64,6 @@ public class UserController {
         return "demo1ok";
     }
 
-//    显示用户
-    @RequestMapping("/findUserAll")
-    public String findUserAll(Model model) {
-        List<User>list = this.userService.findUserAll();
-        model.addAttribute("list", list);
-        return "demo1" ;
-    }
 
     //    根据用户id查询用户
     @RequestMapping("/findUserById")

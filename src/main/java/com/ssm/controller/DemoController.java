@@ -19,6 +19,9 @@ public class DemoController {
     public String showInfo(Model model){
         model.addAttribute("msg1","666DD哈哈ddd");
         model.addAttribute("msg2",new Date());
+//        String str=null;
+//        str.length();
+        int a=10/0;
         return "thymeleafDemo";
     }
     @RequestMapping("/show/{id}")
