@@ -22,8 +22,8 @@ public class DemoController {
         model.addAttribute("msg1", "666DD哈哈ddd");
         model.addAttribute("msg2", new Date());
 //        错误demo
-        String str = null;
-        str.length();
+//        String str = null;
+//        str.length();
 //        int a=10/0;
         return "thymeleafDemo";
     }

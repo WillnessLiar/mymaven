@@ -12,6 +12,21 @@
 <a th:href="@{/User/toaddUser}">
     <li class=" li_a">添加用户</li>
 </a>
+<form name="userForm" th:action="@{/User/selectUserById}" method="post" align='center'>
+    <table>
+        <tr>
+            <td>id:<input name="id"/>
+                <!--                姓名：<select name="itemsType">-->
+                <!--                    <c:forEach items="${itemsTypes}" var="itemsType">-->
+                <!--                        <option value="${itemsType.key}">${itemsType.value}</option>-->
+                <!--                    </c:forEach>-->
+                <!--                </select>-->
+            </td>
+            <td><input type="submit" value="搜索">
+            </td>
+        </tr>
+    </table>
+</form>
 
 <table align='center' border='1' width="50%">
     <tr>
@@ -28,14 +43,13 @@
         <td align="center" th:text="${user.age}"></td>
         <td align="center" width="20%">
             <a class="btn btn-success modiCus" th:href="@{/User/findUserById(id=${user.id})}">修改</a>
-            <!--            <a class="btn btn-success modiCus" data-toggle="modal" data-target="#UpdCusModal">修改</a>-->
             <a class="btn btn-danger" th:href="@{/User/deleteUser(id=${user.id})}">删除</a>
         </td>
     </tr>
 </table>
-<a th:href="@{http://www.baidu.com}">
-    绝对路径
-</a>
+<td><a th:href="@{http://www.baidu.com}">
+    绝对路径:百度
+</a></td>
 <a th:href="@{/show}">
     相对路径
 </a>

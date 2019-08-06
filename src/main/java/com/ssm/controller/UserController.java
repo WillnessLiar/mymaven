@@ -39,23 +39,32 @@ public class UserController {
     //    显示用户
     @RequestMapping("/findUserAll")
     public String findUserAll(Model model) {
-        List<User>list = this.userService.findUserAll();
+        List<User> list = this.userService.findUserAll();
         model.addAttribute("list", list);
-        return "demo1" ;
+        return "demo1";
     }
 
+    //    通过id查找，查询功能
+    @RequestMapping("/selectUserById")
+    public String selectUserById(Model model, Integer id) {
+        User user = this.userService.findUserById(id);
+        List<User> list = new ArrayList<>();
+        list.add(user);
+        model.addAttribute("list", list);
+        return "demo1";
+    }
 
-//    进入添加页面
+    //    进入添加页面
     @RequestMapping("/toaddUser")
     public String toaddUser(User user) {
         return "input";
     }
 
-//    添加用户
+    //    添加用户
 //    @Valid 开启user对象的数据校验,BindingResult 封装校验结果
     @RequestMapping("/addUser")
     public String addUser(@Valid User user, BindingResult result) {
-        if (result.hasErrors()){
+        if (result.hasErrors()) {
             return "input";
         }
         this.userService.addUser(user);
@@ -65,29 +74,30 @@ public class UserController {
     }
 
 
-    //    根据用户id查询用户
+    //    根据用户id查询用户，修改查询
     @RequestMapping("/findUserById")
-    public String findUserById(Integer id,Model model) {
-        User user= this.userService.findUserById(id);
+    public String findUserById(Integer id, Model model) {
+        User user = this.userService.findUserById(id);
         model.addAttribute("user", user);
-        return "updateUser" ;
+        return "updateUser";
     }
 
-//    更新用户
+
+    //    更新用户
     @RequestMapping("/editUser")
     public String editUser(@Valid User user, BindingResult result) {
-        if (result.hasErrors()){
+        if (result.hasErrors()) {
             return "updateUser";
         }
         this.userService.updateUser(user);
-        return "demo1ok" ;
+        return "demo1ok";
     }
 
     //    删除
     @RequestMapping("/deleteUser")
     public String deleteUser(Integer id) {
         this.userService.deleteUserById(id);
-        return "redirect:/User/findUserAll" ;
+        return "redirect:/User/findUserAll";
     }
 //    @RequestMapping("/{page}")
 //    public String showPage(@PathVariable String page) {
