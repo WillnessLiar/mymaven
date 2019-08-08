@@ -16,11 +16,6 @@
     <table>
         <tr>
             <td>id:<input name="id"/>
-                <!--                姓名：<select name="itemsType">-->
-                <!--                    <c:forEach items="${itemsTypes}" var="itemsType">-->
-                <!--                        <option value="${itemsType.key}">${itemsType.value}</option>-->
-                <!--                    </c:forEach>-->
-                <!--                </select>-->
             </td>
             <td><input type="submit" value="搜索">
             </td>
@@ -47,9 +42,9 @@
         </td>
     </tr>
 </table>
-<td><a th:href="@{http://www.baidu.com}">
-    绝对路径:百度
-</a></td>
+<span><a th:href="@{http://www.baidu.com}">
+    绝对路径:百度一下
+</a></span>
 <a th:href="@{/show}">
     相对路径
 </a>

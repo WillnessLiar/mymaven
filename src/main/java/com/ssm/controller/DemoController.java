@@ -21,6 +21,7 @@ public class DemoController {
     public String showInfo(Model model) {
         model.addAttribute("msg1", "666DD哈哈ddd");
         model.addAttribute("msg2", new Date());
+        System.out.println("23哈哈哈");
 //        错误demo
 //        String str = null;
 //        str.length();

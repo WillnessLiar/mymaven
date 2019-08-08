@@ -6,6 +6,7 @@ import org.mybatis.spring.annotation.MapperScan;
 import org.springframework.boot.SpringApplication;
 import org.springframework.boot.autoconfigure.SpringBootApplication;
 import org.springframework.boot.web.servlet.ServletComponentScan;
+import org.springframework.cache.annotation.EnableCaching;
 import org.springframework.context.ConfigurableApplicationContext;
 import org.springframework.context.annotation.Bean;
 import org.springframework.core.io.support.PathMatchingResourcePatternResolver;
@@ -14,6 +15,7 @@ import org.springframework.core.io.support.PathMatchingResourcePatternResolver;
 @ServletComponentScan         //在springboot启动时会扫描webservlet,并将该类实例化
 //@MapperScan("com.ssm")   //用户扫描mybatis的mapper接口
 @MapperScan(basePackages="com.ssm.mapper")
+@EnableCaching
 public class Application {
 
     public static void main(String[] args) {
