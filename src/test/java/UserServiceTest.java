@@ -1,21 +1,22 @@
-//import com.ssm.Application;
-//import com.ssm.service.UserServiceImpl;
-//import org.junit.Test;
-//import org.junit.runner.RunWith;
-//import org.springframework.beans.factory.annotation.Autowired;
-//import org.springframework.boot.test.context.SpringBootTest;
-//import org.springframework.test.context.junit4.SpringJUnit4ClassRunner;
-//
-//@RunWith(SpringJUnit4ClassRunner.class)
-//@SpringBootTest(classes = {Application.class})
-//public class UserServiceTest {
-//
-//    @Autowired
-//    private UserServiceImpl userService;
-//
-//    @Test
-//    public void testAddUser(){
-//        this.userService.addUser();
-//    }
-//
-//}
+import com.ssm.Application;
+import com.ssm.service.UserService;
+import org.junit.Test;
+import org.junit.runner.RunWith;
+import org.springframework.beans.factory.annotation.Autowired;
+import org.springframework.boot.test.context.SpringBootTest;
+import org.springframework.test.context.junit4.SpringJUnit4ClassRunner;
+
+@RunWith(SpringJUnit4ClassRunner.class)
+@SpringBootTest(classes = Application.class)
+public class UserServiceTest {
+
+    @Autowired
+    private UserService userService;
+
+    @Test
+    public void testFindUserById(){
+        System.out.println(this.userService.findUserById(6));
+        System.out.println(this.userService.findUserById(6));
+    }
+
+}

@@ -4,6 +4,7 @@ import com.ssm.mapper.UserMapper;
 import com.ssm.po.User;
 import com.ssm.service.UserService;
 import org.springframework.beans.factory.annotation.Autowired;
+import org.springframework.cache.annotation.Cacheable;
 import org.springframework.stereotype.Service;
 import org.springframework.transaction.annotation.Transactional;
 
@@ -16,6 +17,9 @@ public class UserServiceImpl implements UserService {
     @Autowired
     private UserMapper userMapper;
 
+//    @Autowired
+//    private UserRepository userRepository;
+
     @Override
     public void addUser(User user) {
         this.userMapper.insertUser(user);
@@ -27,6 +31,7 @@ public class UserServiceImpl implements UserService {
     }
 
     @Override
+    @Cacheable(value = "user")          /*对当前对象做缓存*/
     public User findUserById(Integer id) {
         return this.userMapper.selectUserById(id);
     }
@@ -41,5 +46,10 @@ public class UserServiceImpl implements UserService {
         this.userMapper.deleteUserById(id);
 
     }
+
+//    @Override
+//    public Page<User> findUserByPage(Pageable pageable) {
+//        return null;
+//    }
 
 }

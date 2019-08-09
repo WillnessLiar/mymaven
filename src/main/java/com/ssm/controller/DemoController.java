@@ -4,14 +4,13 @@ package com.ssm.controller;
 import com.ssm.po.User;
 import org.springframework.stereotype.Controller;
 import org.springframework.ui.Model;
-import org.springframework.web.bind.annotation.ExceptionHandler;
 import org.springframework.web.bind.annotation.PathVariable;
 import org.springframework.web.bind.annotation.RequestMapping;
-import org.springframework.web.servlet.ModelAndView;
 
 import javax.servlet.http.HttpServletRequest;
-import javax.servlet.http.HttpSession;
-import java.util.*;
+import java.util.Date;
+import java.util.HashMap;
+import java.util.Map;
 
 
 @Controller
@@ -21,7 +20,7 @@ public class DemoController {
     public String showInfo(Model model) {
         model.addAttribute("msg1", "666DD哈哈ddd");
         model.addAttribute("msg2", new Date());
-        System.out.println("23哈哈哈");
+//        System.out.println("23哈哈哈");
 //        错误demo
 //        String str = null;
 //        str.length();

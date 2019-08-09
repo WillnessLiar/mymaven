@@ -23,4 +23,6 @@ public interface UserMapper {
 
     @Delete("delete from user where id=#{value}")
     void deleteUserById(Integer id);
+
+//    Pageable<User> findAll(Pageable pageable);
 }
