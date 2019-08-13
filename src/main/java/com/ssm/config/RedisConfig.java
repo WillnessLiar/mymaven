@@ -16,9 +16,12 @@ public class RedisConfig {
     @ConfigurationProperties(prefix="spring.redis.pool")
     public JedisPoolConfig jedisPoolConfig(){
         JedisPoolConfig config = new JedisPoolConfig();
-        config.setMaxIdle(10);      /*最大空闲数*/
-        config.setMinIdle(5);        /*最小空闲数*/
-        config.setMaxTotal(20);         /*最大连接数*/
+//        config.setMaxIdle(300);      /*最大空闲数*/
+//        config.setMinIdle(1);        /*最小空闲数*/
+//        config.setMaxTotal(300);         /*最大连接数*/
+        System.out.println("默认值："+config.getMaxIdle());
+        System.out.println(config.getMaxTotal());
+        System.out.println(config.getMinIdle());
         return config;
     }
 
@@ -26,10 +29,13 @@ public class RedisConfig {
     @Bean
     @ConfigurationProperties(prefix="spring.redis")
     public JedisConnectionFactory jedisConnectionFactory(JedisPoolConfig config){
+        System.out.println("配置完毕："+config.getMaxIdle());
+        System.out.println(config.getMaxTotal());
+        System.out.println(config.getMinIdle());
         JedisConnectionFactory factory = new JedisConnectionFactory();
         factory.setPoolConfig(config);      /*关联连接池的配置对象*/
-        factory.setHostName("192.168.70.128");  /*配置链接Redis的信息*/
-        factory.setPort(6379);   /*redis端口*/
+//        factory.setHostName("127.0.0.1");  /*配置链接Redis的信息*/
+//        factory.setPort(6379);   /*redis端口*/
         return factory;
     }
 

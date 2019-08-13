@@ -6,6 +6,7 @@ import javax.validation.constraints.*;
 import java.io.Serializable;
 
 public class User implements Serializable {
+    private static final long serialVersionUID = 8841433872811285796L;
     @NotNull(message = "id为空！！！") //非空校验
     private Integer id;
     @Length(min = 1,max = 8)
