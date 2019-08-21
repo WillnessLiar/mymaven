@@ -54,7 +54,7 @@ public class RedisTest {
 //        user.setName("拉菲");
 //        user.setPassword("55545");
 //        user.setAge(82);
-        this.redisTemplate.setValueSerializer(new Jackson2JsonRedisSerializer<>(User.class));
+        this.redisTemplate.setValueSerializer(new Jackson2JsonRedisSerializer<>(User.class));   //序列化
         this.redisTemplate.opsForValue().set("user_json", user);
     }
 
@@ -62,8 +62,9 @@ public class RedisTest {
     @Test
     public void tseGetUserJson() {
         this.redisTemplate.setValueSerializer(new Jackson2JsonRedisSerializer<>(User.class));
-        User user = (User)this.redisTemplate.opsForValue().get("user_json");
-        System.out.println(user);
+        System.out.println(this.redisTemplate.opsForValue().get("user_json"));
+//        User user = (User)this.redisTemplate.opsForValue().get("user_json");
+//        System.out.println(user);
     }
 }
 
