@@ -1,10 +1,11 @@
 package com.ssm.service;
 
 import com.ssm.po.User;
+import org.springframework.stereotype.Service;
 
 import java.util.List;
 
-
+@Service
 public interface UserService {
 
     void addUser(User user);
