@@ -22,4 +22,5 @@ public class ScheduledDemo {
         System.out.println("定时器触发"+new Date());
     }
 
+
 }
