@@ -2,9 +2,12 @@ package com.ssm.po;
 
 import org.hibernate.validator.constraints.Length;
 
-import javax.validation.constraints.*;
+import javax.validation.constraints.NotEmpty;
+import javax.validation.constraints.NotNull;
 import java.io.Serializable;
 
+//@Entity
+//@Table(name = "user")
 public class User implements Serializable {
     private static final long serialVersionUID = 8841433872811285796L;
     @NotNull(message = "id为空！！！") //非空校验
