@@ -21,6 +21,4 @@ public class ScheduledDemo {
     public void scheduledMethod(){
         System.out.println("定时器触发"+new Date());
     }
-
-
 }
