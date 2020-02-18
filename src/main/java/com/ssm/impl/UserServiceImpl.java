@@ -22,19 +22,19 @@ public class UserServiceImpl implements UserService {
 //    private UserRepository userRepository;
 
     @Override
-    @CacheEvict(value = "user",allEntries = true)     /*清除缓存*/
+//    @CacheEvict(value = "user",allEntries = true)     /*清除缓存*/
     public void addUser(User user) {
         this.userMapper.insertUser(user);
     }
 
     @Override
-    @Cacheable(value = "user")
+//    @Cacheable(value = "user")
     public List<User> findUserAll() {
         return this.userMapper.selectUserAll();
     }
 
     @Override
-    @Cacheable(value = "user",key = "#id")          /*对当前对象做缓存*/
+//    @Cacheable(value = "user",key = "#id")          /*对当前对象做缓存*/
     public User findUserById(Integer id) {
         return this.userMapper.selectUserById(id);
     }
