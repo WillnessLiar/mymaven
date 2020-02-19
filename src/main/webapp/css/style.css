@@ -265,10 +265,10 @@ p {
 /*--//education--*/
 /*--skills--*/
 .skills{
-	background:white;
+	background:black;
 }
 .portfolio{
-    background: black;
+    background: white;
 }
 .bar-grids {
     padding: 0 4em;

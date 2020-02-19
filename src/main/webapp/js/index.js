@@ -1,24 +1,3 @@
-
-/**
- * Created by 我不管我最帅 on 2018/6/13.
- */
-/*function dianji(){
-    $(".rd").css({left:"15vw"});
-    $(".ld").css({left:"0vw"});
- $(".n").css({left:"15vw"});
-   $(".n").onclick=function(){
-        fanhui();
-    }
-}
-function fanhui(){
-    $(".ld").css({left:"-15vw"});
-    $(".rd").css({left:"0vw"});
-    $(".n").css({left:"0vw"});
-    $(".n").onclick=function(){
-        dianji();
-    }
-}*/
-
 function dianji(){
     var a=document.getElementById("ld");
     var b=document.getElementById("rd");
