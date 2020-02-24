@@ -1,5 +1,5 @@
 <!DOCTYPE html>
-<html>
+<html lang="en" xmlns:th="http://www.w3.org/1999/xhtml">
 <head>
 <title>MY BLOG</title>
 <meta name="viewport" content="width=device-width, initial-scale=1">
@@ -97,7 +97,7 @@
 						<li><a href="#projects" class="scroll">部分作品</a></li>
 						<li><a href="#contact" class="scroll">联系我</a></li>
 						<li><a href="images/jianli.pdf" target="_blank">个人简历</a></li>
-						<li><a href="" target="_blank">卖点东西</a></li>
+						<li><a href="../resources/templates/page.html" target="_blank">卖点东西</a></li>
 						<li><a href="" target="_blank">动态</a></li>
 					</ul>
 					<div class="clearfix"> </div>
@@ -607,7 +607,7 @@
 			<h3 class="title">联系我</h3>
 			<div class="contact-row">
 				<div class="col-md-6 contact-left">
-					<iframe src="https://map.baidu.com/search/%E5%8D%8E%E5%85%B4%E8%B6%85%E5%B8%82(%E7%9F%B3%E6%BA%AA%E5%BA%97)/@12625608.125,2629001,19z?querytype=s&da_src=shareurl&wd=%E5%8D%8E%E5%85%B4%E8%B6%85%E5%B8%82(%E7%9F%B3%E6%BA%AA%E5%BA%97)&c=257&src=0&wd2=%E5%B9%BF%E5%B7%9E%E5%B8%82%E5%A4%A9%E6%B2%B3%E5%8C%BA&pn=0&sug=1&l=13&b=(12595198.113486238,2626367.5018348624;12637055.593119267,2646914.728165138)&from=webmap&biz_forward=%7B%22scaler%22:2,%22styles%22:%22pl%22%7D&sug_forward=a7dda9d74e88b4c4f60e77b3&device_ratio=2"></iframe>
+<!--					<iframe src="https://map.baidu.com/search/%E5%8D%8E%E5%85%B4%E8%B6%85%E5%B8%82(%E7%9F%B3%E6%BA%AA%E5%BA%97)/@12625608.125,2629001,19z?querytype=s&da_src=shareurl&wd=%E5%8D%8E%E5%85%B4%E8%B6%85%E5%B8%82(%E7%9F%B3%E6%BA%AA%E5%BA%97)&c=257&src=0&wd2=%E5%B9%BF%E5%B7%9E%E5%B8%82%E5%A4%A9%E6%B2%B3%E5%8C%BA&pn=0&sug=1&l=13&b=(12595198.113486238,2626367.5018348624;12637055.593119267,2646914.728165138)&from=webmap&biz_forward=%7B%22scaler%22:2,%22styles%22:%22pl%22%7D&sug_forward=a7dda9d74e88b4c4f60e77b3&device_ratio=2"></iframe>-->
 				</div>
 				<div class="col-md-6 contact-right">
 					<div class="address-left">
@@ -619,11 +619,11 @@
 					</div>
 					<div class="clearfix"></div>
 					<div class="contact-form">
-						<form action="#" method="post">
-							<input type="text" name="Name" placeholder="Name" required="">
-							<input class="email" name="Email" type="text" placeholder="Email" required="">
-							<input class="phone" name="phone" type="text" placeholder="Phone" required="">
-							<textarea name="Message" placeholder="Message" required=""></textarea>
+						<form th:action="@{/Viewer/addViewer}" method="post">
+							<input type="text" name="vname" placeholder="Name">
+							<input class="email" name="vemail" type="text" placeholder="Email" >
+							<input class="phone" name="vphone" type="text" placeholder="Phone" >
+							<textarea name="vmessage" placeholder="Message" ></textarea>
 							<input type="submit" value="提交" >
 						</form>
 					</div>

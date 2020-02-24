@@ -1,0 +1,63 @@
+<!DOCTYPE html>
+<html lang="en" xmlns:th="http://www.w3.org/1999/xhtml">
+<head>
+    <meta charset="UTF-8">
+    <title>页面</title>
+    <link rel="stylesheet" href="/css/bootstrap.css">
+    <link href="/css/showmessage.css" type="text/css" rel="stylesheet"/>
+    <script src="https://s2.pstatp.com/cdn/expire-1-M/jquery/3.4.0/jquery.js" type="application/javascript"></script>
+</head>
+<body>
+<div class="page">
+    <div class="content">
+        <!--头部-->
+        <div class="header">
+            <p class="mesaageCheck">消息查看</p>
+        </div>
+
+        <!--消息块-->
+        <div class="infoContent">
+            <tr th:each="viewer:${list}">
+            <div class="info">
+                <div class="infoHeader">
+                    <span>姓名：<td align="center" th:text="${viewer.vname}"></td></span>
+                    <span>邮箱：<td align="center" th:text="${viewer.vemail}"></td></span>
+                    <span>电话号码：<td align="center" th:text="${viewer.vphone}"></td></span>
+                    <td align="center" width="20%">
+                        <a class="btn btn-danger" th:href="@{/Viewer/deleteViewer(vphone=${viewer.vphone})}">删除</a>
+                    </td>
+                </div>
+                <div class="textInput">
+                    <a th:text="${viewer.vmessage}"></a>
+                </div>
+            </div>
+
+<!--            <div class="info">-->
+<!--                <div class="infoHeader">-->
+<!--                    <span>姓名：黄锦荣</span>-->
+<!--                    <span>邮箱：avmoo@email.com</span>-->
+<!--                    <span>电话号码：13800000000</span>-->
+<!--                </div>-->
+<!--                <div class="textInput">-->
+<!--                    <textarea style="width: 100%;height: 108px;border: none"></textarea>-->
+<!--                </div>-->
+<!--            </div>-->
+
+<!--            <div class="info">-->
+<!--                <div class="infoHeader">-->
+<!--                    <span>姓名：黄锦荣</span>-->
+<!--                    <span>邮箱：avmoo@email.com</span>-->
+<!--                    <span>电话号码：13800000000</span>-->
+<!--                </div>-->
+<!--                <div class="textInput">-->
+<!--                    <textarea style="width: 100%;height: 108px;border: none"></textarea>-->
+<!--                </div>-->
+<!--            </div>-->
+
+        </div>
+    </div>
+</div>
+
+
+</body>
+</html>

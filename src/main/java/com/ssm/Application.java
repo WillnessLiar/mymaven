@@ -7,7 +7,7 @@ import org.springframework.boot.web.servlet.ServletComponentScan;
 import org.springframework.cache.annotation.EnableCaching;
 import org.springframework.scheduling.annotation.EnableScheduling;
 
-//@MapperScan("com.ssm")   //用户扫描mybatis的mapper接口
+
 @EnableScheduling
 @SpringBootApplication
 @ServletComponentScan         //在springboot启动时会扫描webservlet,并将该类实例化
