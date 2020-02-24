@@ -98,7 +98,7 @@
 						<li><a href="#contact" class="scroll">联系我</a></li>
 						<li><a href="images/jianli.pdf" target="_blank">个人简历</a></li>
 						<li><a href="../resources/templates/page.html" target="_blank">卖点东西</a></li>
-						<li><a href="" target="_blank">动态</a></li>
+						<li><a href="" target="_blank">最近动态</a></li>
 					</ul>
 					<div class="clearfix"> </div>
 				</div>
@@ -619,11 +619,11 @@
 					</div>
 					<div class="clearfix"></div>
 					<div class="contact-form">
-						<form th:action="@{/Viewer/addViewer}" method="post">
-							<input type="text" name="vname" placeholder="Name">
-							<input class="email" name="vemail" type="text" placeholder="Email" >
-							<input class="phone" name="vphone" type="text" placeholder="Phone" >
-							<textarea name="vmessage" placeholder="Message" ></textarea>
+						<form action="/Viewer/addViewer.do" method="post">
+							<input type="text" name="vname" placeholder="Name，长度1-20"><!--<font color="red" th:errors="${viewer.vname}"></font>-->
+							<input class="email" name="vemail" type="text" placeholder="Email，长度1-30" ><!--<font color="red" th:errors="${viewer.vemail}"></font>-->
+							<input class="phone" name="vphone" type="text" placeholder="Phone，长度1-13" ><!--<font color="red" th:errors="${viewer.vphone}"></font>-->
+							<textarea name="vmessage" placeholder="Message，长度1-500" ></textarea><!--<font color="red" th:errors="${viewer.vmessage}"></font>-->
 							<input type="submit" value="提交" >
 						</form>
 					</div>

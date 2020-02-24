@@ -20,7 +20,7 @@ public class ViewerController {
     @Autowired
     private ViewerService viewerService;
 
-        @RequestMapping(value ="/addViewer", method = RequestMethod.POST)
+        @RequestMapping(path ="/addViewer.do", method = RequestMethod.POST)
     public String addViewer(@Valid Viewer viewer, BindingResult result) {
         if (result.hasErrors()) {
             return "findex";
