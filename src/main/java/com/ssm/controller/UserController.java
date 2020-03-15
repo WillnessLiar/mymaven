@@ -2,17 +2,19 @@ package com.ssm.controller;
 
 import com.ssm.po.User;
 import com.ssm.service.UserService;
+import com.ssm.utils.R;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Controller;
 import org.springframework.ui.Model;
 import org.springframework.validation.BindingResult;
-import org.springframework.web.bind.annotation.RequestMapping;
-import org.springframework.web.bind.annotation.ResponseBody;
-import org.springframework.web.bind.annotation.RestController;
+import org.springframework.web.bind.annotation.*;
+import org.springframework.web.servlet.ModelAndView;
 
+import javax.servlet.http.HttpSession;
 import javax.validation.Valid;
 import java.util.ArrayList;
 import java.util.List;
+import java.util.Map;
 
 @Controller
 @RequestMapping("/User")
@@ -106,4 +108,65 @@ public class UserController {
 //
 //        return page;
 //    }
+    @ResponseBody
+    @PostMapping("/login")
+    public R login(@RequestBody Map<String,String> userLogin,HttpSession session) {
+        Map<String, Object> user = userService.selectByUsername(userLogin.get("username"));
+        if (user==null){
+            return R.error("无此帐号,请先注册");
+        }else {
+            if (!user.get("password").equals(userLogin.get("password"))){
+
+                return R.error("密码错误");
+            }else {
+                session.setAttribute("user",user);
+                return R.ok(user);
+            }
+
+
+}
+
+}
+
+    @ResponseBody
+    @GetMapping("/logout")
+    public ModelAndView logout(HttpSession session) {
+        ModelAndView mv = new ModelAndView();
+        session.removeAttribute("user");
+        mv.setViewName("redirect:/login.html");
+        return mv;
+    }
+    @ResponseBody
+    @PostMapping("/register")
+    public R register(@RequestBody Map<String,Object> users) {
+        String age = (String) users.get("age");
+        try {
+            int age_int=Integer.parseInt( age );
+        }catch (NumberFormatException e){
+            return R.error("年龄必须为数字");
+        }
+        String name= (String) users.get("name");
+        if(name.equals("")){
+            return R.error("姓名不能为空");
+        }
+        String password= (String) users.get("password");
+
+        String username= (String) users.get("username");
+        if (username.equals("")){
+            return R.error("用户名不能为空");
+        }
+        if (password.equals("")){
+            return R.error("密码不能为空");
+        }
+        Map<String, Object> user = userService.selectByUsername(username);
+        if(user!=null){
+            return R.error("帐号已被注册");
+        }else {
+            users.put("role","1");
+            userService.register(users);
+            return R.ok();
+        }
+
+        }
+
 }

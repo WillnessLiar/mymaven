@@ -1,30 +1,30 @@
-<ehcache xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
-         xsi:noNamespaceSchemaLocation="http://ehcache.org/ehcache.xsd"
-         updateCheck="false">
+<!--<ehcache xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"-->
+         <!--xsi:noNamespaceSchemaLocation="http://ehcache.org/ehcache.xsd"-->
+         <!--updateCheck="false">-->
 
-    <diskStore path="java.io.tmpdir"/>
+    <!--<diskStore path="java.io.tmpdir"/>-->
 
-<!--认缓存策略。1：缓存对象的数量2：是否持久化3：访问对象时间间隔，超过则删除4：对象生命周期-->
-    <defaultCache
-            maxElementsInMemory="10000"
-            eternal="false"
-            timeToIdleSeconds="120"
-            timeToLiveSeconds="120"
-            maxElementsOnDisk="10000000"
-            diskExpiryThreadIntervalSeconds="120"
-            memoryStoreEvictionPolicy="LRU">
-        <persistence strategy="localTempSwap"/>
-    </defaultCache>
+<!--&lt;!&ndash;认缓存策略。1：缓存对象的数量2：是否持久化3：访问对象时间间隔，超过则删除4：对象生命周期&ndash;&gt;-->
+    <!--<defaultCache-->
+            <!--maxElementsInMemory="10000"-->
+            <!--eternal="false"-->
+            <!--timeToIdleSeconds="120"-->
+            <!--timeToLiveSeconds="120"-->
+            <!--maxElementsOnDisk="10000000"-->
+            <!--diskExpiryThreadIntervalSeconds="120"-->
+            <!--memoryStoreEvictionPolicy="LRU">-->
+        <!--<persistence strategy="localTempSwap"/>-->
+    <!--</defaultCache>-->
 
-<!--    自定义缓存策略-->
-<!--    <Cache  name="user"-->
-<!--            maxElementsInMemory="10000"-->
-<!--            eternal="false"-->
-<!--            timeToIdleSeconds="120"-->
-<!--            timeToLiveSeconds="120"-->
-<!--            maxElementsOnDisk="10000000"-->
-<!--            diskExpiryThreadIntervalSeconds="120"-->
-<!--            memoryStoreEvictionPolicy="LRU">-->
-<!--        <persistence strategy="localTempSwap"/>-->
-<!--    </Cache>-->
-</ehcache>
+<!--&lt;!&ndash;    自定义缓存策略&ndash;&gt;-->
+<!--&lt;!&ndash;    <Cache  name="user"&ndash;&gt;-->
+<!--&lt;!&ndash;            maxElementsInMemory="10000"&ndash;&gt;-->
+<!--&lt;!&ndash;            eternal="false"&ndash;&gt;-->
+<!--&lt;!&ndash;            timeToIdleSeconds="120"&ndash;&gt;-->
+<!--&lt;!&ndash;            timeToLiveSeconds="120"&ndash;&gt;-->
+<!--&lt;!&ndash;            maxElementsOnDisk="10000000"&ndash;&gt;-->
+<!--&lt;!&ndash;            diskExpiryThreadIntervalSeconds="120"&ndash;&gt;-->
+<!--&lt;!&ndash;            memoryStoreEvictionPolicy="LRU">&ndash;&gt;-->
+<!--&lt;!&ndash;        <persistence strategy="localTempSwap"/>&ndash;&gt;-->
+<!--&lt;!&ndash;    </Cache>&ndash;&gt;-->
+<!--</ehcache>-->

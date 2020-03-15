@@ -1,18 +1,21 @@
-//import com.ssm.Application;
-//import com.ssm.dao.UserRepository;
-//import com.ssm.dao.UserRepositoryByName;
-//import com.ssm.po.User;
-//import org.junit.Test;
-//import org.junit.runner.RunWith;
-//import org.springframework.beans.factory.annotation.Autowired;
-//import org.springframework.boot.test.context.SpringBootTest;
-//import org.springframework.test.context.junit4.SpringJUnit4ClassRunner;
-//
-//import java.util.List;
-//
-//@RunWith(SpringJUnit4ClassRunner.class)
-//@SpringBootTest(classes = Application.class)
-//public class UserRepositoryTest {
+import com.ssm.Application;
+
+import com.ssm.mapper.PhotoMapper;
+import com.ssm.mapper.UserMapper;
+import com.ssm.po.User;
+import org.junit.Test;
+import org.junit.runner.RunWith;
+import org.springframework.beans.factory.annotation.Autowired;
+import org.springframework.boot.test.context.SpringBootTest;
+import org.springframework.test.context.junit4.SpringJUnit4ClassRunner;
+
+import java.util.HashMap;
+import java.util.List;
+import java.util.Map;
+
+@RunWith(SpringJUnit4ClassRunner.class)
+@SpringBootTest(classes = Application.class)
+public class UserRepositoryTest {
 //
 //    @Autowired
 //    private UserRepositoryByName userRepositoryByName;
@@ -29,13 +32,18 @@
 //        user.setAge(8);
 ////        this.userRepository.save(user);
 //    }
-//
-//    @Test
-//    public void testFindByName(){
-//        List<User> list = this.userRepositoryByName.findByName("cat");
-//        for (User user : list){
-//            System.out.println(user);
-//        }
-//    }
-//
-//}
+    @Autowired
+    private UserMapper userMapper;
+    @Autowired
+    private PhotoMapper photoMapper;
+    @Test
+    public void testFindByName(){
+        //把要插入的表的有效字段都封装到一个map中
+//        Map<String, Object> objMap = new HashMap<>();
+//        objMap.put("pdata", "xiaoming");
+//        objMap.put("msg", "123");
+
+        List<Map<String, Object>> map = photoMapper.select_photo();
+    }
+
+}

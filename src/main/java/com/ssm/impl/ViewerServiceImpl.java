@@ -18,7 +18,7 @@ public class ViewerServiceImpl implements ViewerService {
 
     @Override
     public void addViewer(Viewer viewer) {
-        this.viewerMapper.insertViewer(viewer);
+       viewerMapper.insertViewer(viewer);
     }
 
     @Override

@@ -12,7 +12,7 @@ import java.util.List;
 @Mapper
 @Repository
 public interface ViewerMapper {
-    @Insert("insert into Viewer(vname,vemail,vphone,vmessage) values (#{vname},#{vemail},#{vphone},#{vmessage})")
+    @Insert("insert into viewer(vname,vemail,vphone,vmessage) values (#{vname},#{vemail},#{vphone},#{vmessage})")
     void insertViewer(Viewer viewer);
 
     @Select("SELECT vname,vemail,vphone,vmessage FROM Viewer")

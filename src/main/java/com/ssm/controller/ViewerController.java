@@ -2,16 +2,21 @@ package com.ssm.controller;
 
 import com.ssm.po.Viewer;
 import com.ssm.service.ViewerService;
+import com.ssm.utils.R;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Controller;
 import org.springframework.ui.Model;
 import org.springframework.validation.BindingResult;
-import org.springframework.web.bind.annotation.PostMapping;
-import org.springframework.web.bind.annotation.RequestMapping;
-import org.springframework.web.bind.annotation.RequestMethod;
+import org.springframework.web.bind.annotation.*;
+import org.springframework.web.multipart.MultipartFile;
 
+import javax.servlet.http.HttpServletRequest;
 import javax.validation.Valid;
+import java.io.File;
+import java.io.IOException;
+import java.util.HashMap;
 import java.util.List;
+import java.util.Map;
 
 @Controller
 @RequestMapping("/Viewer")
@@ -30,13 +35,6 @@ public class ViewerController {
             System.out.println(viewer.toString());
             return "demo2ok";
         }
-//    @PostMapping(value = "/addViewer")
-//    public String addViewer(Viewer viewer) {
-//        this.viewerService.addViewer(viewer);
-//        System.out.println(viewer);
-//        System.out.println(viewer.toString());
-//        return "demo2ok";
-//    }
 
     @RequestMapping("/findViewerAll")
     public String findViewerAll(Model model) {
@@ -50,4 +48,5 @@ public class ViewerController {
         this.viewerService.deleteViewerByVphone(vphone);
         return "redirect:/Viewer/findViewerAll";
     }
+
 }

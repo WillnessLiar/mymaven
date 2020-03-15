@@ -10,6 +10,7 @@ import org.springframework.stereotype.Service;
 import org.springframework.transaction.annotation.Transactional;
 
 import java.util.List;
+import java.util.Map;
 
 @Service
 @Transactional
@@ -49,6 +50,17 @@ public class UserServiceImpl implements UserService {
         this.userMapper.deleteUserById(id);
 
     }
+
+    @Override
+    public Map<String, Object> selectByUsername(String username) {
+        return userMapper.selectByUsername(username);
+    }
+
+    @Override
+    public void register(Map<String, Object> user) {
+        userMapper.register(user);
+    }
+
 
 //    @Override
 //    public Page<User> findUserByPage(Pageable pageable) {

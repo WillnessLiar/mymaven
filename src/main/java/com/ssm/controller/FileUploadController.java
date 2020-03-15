@@ -15,7 +15,7 @@ public class FileUploadController {
     @RequestMapping("/fileUploadController")
     public Map<String,Object> fileUpload(MultipartFile filename) throws Exception{
         System.out.println(filename.getOriginalFilename());
-        filename.transferTo(new File("D:/"+filename.getOriginalFilename()));
+        filename.transferTo(new File("E:/"+filename.getOriginalFilename()));
         Map<String,Object> map = new HashMap<>();
         map.put("msg","ok");
         return map;

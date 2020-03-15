@@ -1,3 +1,9 @@
+/*--
+Author: W3layouts
+Author URL: http://w3layouts.com
+License: Creative Commons Attribution 3.0 Unported
+License URL: http://creativecommons.org/licenses/by/3.0/
+--*/
 body{
 	margin:0;
 	font-family: 'Roboto Condensed', sans-serif;
@@ -27,7 +33,7 @@ body a:hover{
 }
 /*--baner--*/
 .banner {
-	background:url(../images/huawei.jpg)no-repeat center 0px;
+	background:url(../images/w12.jpg)no-repeat center 0px;
 	-webkit-background-size:cover;
 	background-size:cover;
 	-moz-background-size:cover;
@@ -265,10 +271,7 @@ p {
 /*--//education--*/
 /*--skills--*/
 .skills{
-	background:black;
-}
-.portfolio{
-    background: white;
+	background:#000;
 }
 .bar-grids {
     padding: 0 4em;
@@ -282,8 +285,8 @@ p {
     background-color: #766E04;
 }
 .bar-grids h6 {
-    font-size: 1.5em;
-    color: red;
+    font-size: 1.1em;
+    color: #fff;
     margin-bottom: 0.6em;
 }
 .bar-grids h6 span {
@@ -495,7 +498,7 @@ h2.resp-accordion {
 /*--//portfolio--*/
 /*--contact--*/
 .contact{
-	background:black;
+	background:#000;
 }
 .contact-left iframe {
     width: 100%;

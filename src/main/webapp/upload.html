@@ -1,0 +1,65 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>动态发布</title>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="chrome=1">
+    <meta content="width=device-width, initial-scale=1, maximum-scale=1, user-scalable=no" name="viewport">
+    <link rel="stylesheet" href="/css/bootstrap.min.css">
+</head>
+<body>
+
+
+<div id="missions" v-cloak><!--列表信息加toolbar-->
+
+    <!--表单-->
+    <div  class="panel panel-default">
+        <div class="panel-heading">动态发布</div><!--表单动态标题-->
+        <form  class="form-horizontal layui-form" >
+            <!--toolbars:表单-->
+            <!--1、项目表单-->
+            <!--2、4、任务表单-->
+            <!--5、分解的子任务表单-->
+
+            <!--项目表单-->
+            <div  class="form-group" >
+                <div class="col-sm-2 control-label">上传图片</div>
+                <div class="col-sm-10">
+                    <input   type="file" name="图片选择" class="form-control-file" id="file"  placeholder="上传图片"/>
+                </div>
+            </div>
+            <div class="form-group" >
+                <div class="col-sm-2 control-label">信息描述</div>
+                <div class="col-sm-5">
+
+                    <textarea  class="form-control" id="msg" placeholder="发布信息" style="height: 200px"></textarea>
+                </div>
+            </div>
+
+
+            <!--按钮-->
+            <div  class="form-group">
+                <div class="col-sm-2 control-label"></div>
+                <input type="button" id="upJQuery" class="btn btn-primary"  value="确定发布"/>
+            </div>
+
+        </form>
+
+    </div>
+
+</div>
+
+<script src="/js/jquery.min.js"></script>
+
+
+<script src="/js/bootstrap.min.js"></script>
+<script src="/js/vue.min.js"></script>
+
+
+
+<script src="/js/mission.js"></script>
+
+
+
+</body>
+</html>

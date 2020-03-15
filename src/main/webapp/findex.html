@@ -5,17 +5,24 @@
 <meta name="viewport" content="width=device-width, initial-scale=1">
 <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
 <meta name="keywords" content="hhjr" />
+
 <script type="application/x-javascript"> addEventListener("load", function() { setTimeout(hideURLbar, 0); }, false); function hideURLbar(){ window.scrollTo(0,1); } </script>
-<link rel="shortcut icon" href="/images/good.jpg" type="image/x-icon">
-<link rel="icon" href="/images/good.jpg" type="image/x-icon">
-<link href="/css/bootstrap2.css" type="text/css" rel="stylesheet" media="all">
+
+	<link rel="shortcut icon" href="/images/good.jpg" type="image/x-icon">
+
+
+	<link rel="icon" href="/images/good.jpg" type="image/x-icon">
+	<base href="/">
+	<link href="/css/bootstrap2.css" type="text/css" rel="stylesheet" media="all">
 <link href="/css/style.css" type="text/css" rel="stylesheet" media="all">
 <link rel="stylesheet" href="/css/swipebox.css">
-<script src="/js/jquery-1.11.1.min.js" type="text/javascript"></script>
+	<script src="js/jquery.min.js"></script>
 <script type="text/javascript" src="/js/move-top.js"></script>
 <script type="text/javascript" src="/js/easing.js"></script>
 	<script type="text/javascript" src="/js/jquery.media.js"></script>
 	<script src="/js/bootstrap.js" type="text/javascript"></script>
+	<link href="/css/asidenav.css" rel="stylesheet" type="text/css"><!悬浮帮助栏>
+	<script type="text/javascript" src="/js/asidenav.js"></script><!悬浮帮助栏>
 <script type="text/javascript">
 		jQuery(document).ready(function($) {
 			$(".scroll").click(function(event){		
@@ -26,6 +33,13 @@
 </script>
 </head>
 <body>
+<div class="aside-nav bounceInUp animated" id="aside-nav">
+	<label  class="aside-menu" title="按住拖动">帮助</label>
+	<a style="color: #64448f" title="返回首页" class="menu-item menu-first">首页</a>
+	<a href="login.html" title="用户登录" class="menu-item menu-second">登录</a>
+	<a href="dynamic.html" title="最近动态" class="menu-item menu-third">动态</a>
+	<a style="color: #64448f" title="跳转后台" class="menu-item menu-line menu-fourth">后台</a>
+</div>
 	<div id="home" class="banner">
 		<div class="banner-info">
 			<div class="container">
@@ -91,14 +105,15 @@
 			<div class="collapse navbar-collapse" id="bs-example-navbar-collapse-1">
 				<div class="menu">
 					<ul class="nav navbar">
-						<li><a href="#about" class="scroll">关于我</a></li>
+<!--						<li><a href="#about" class="scroll">关于我</a></li>-->
 						<li><a href="#work" class="scroll">工作经历</a></li>
 						<li><a href="#skills" class="scroll">专业技能</a></li>
 						<li><a href="#projects" class="scroll">部分作品</a></li>
 						<li><a href="#contact" class="scroll">联系我</a></li>
 						<li><a href="images/jianli.pdf" target="_blank">个人简历</a></li>
-						<li><a href="../resources/templates/page.html" target="_blank">卖点东西</a></li>
-						<li><a href="" target="_blank">最近动态</a></li>
+<!--						<li><a href="../templates/page.html" target="_blank">卖点东西</a></li>-->
+						<li><a href="dynamic.html" target="_blank">最近动态</a></li>
+						<li><a href="login.html" target="_blank">登录</a></li>
 					</ul>
 					<div class="clearfix"> </div>
 				</div>
@@ -239,7 +254,6 @@
 			<div class="sap_tabs">			
 				<div id="horizontalTab" style="display: block; width: 100%; margin: 0px;">
 					<ul class="resp-tabs-list wow fadeInUp animated" data-wow-delay=".7s">
-<!--						<li class="resp-tab-item"><span>SHOW</span></li>-->
 						<li class="resp-tab-item"><span>Html</span></li>
 						<li class="resp-tab-item"><span>Sontan</span></li>
 						<li class="resp-tab-item"><span>Guangzhou</span></li>
@@ -247,179 +261,39 @@
 					</ul>	
 					<div class="clearfix"> </div>	
 					<div class="resp-tabs-container">
-<!--						<div class="tab-1 resp-tab-content">-->
-<!--							<div class="tab_img">-->
-<!--								<div class="col-md-4 portfolio-grids">-->
-<!--									<div class="grid">-->
-<!--										<a href="images/g1.jpg" class="swipebox" title="Lorem ipsum dolor sit amet, consectetur adipiscing elit. Duis maximus tortor diam, ac lobortis justo rutrum quis. Praesent non purus fermentum, eleifend velit non">-->
-<!--											<img src="images/g1.jpg" alt="" class="img-responsive" />-->
-<!--											<div class="figcaption">-->
-<!--												<h3>My<span> Project</span></h3>-->
-<!--												<p>苹果酒广告，莎拉喜欢看云。她很沮丧。</p>-->
-<!--											</div>-->
-<!--										</a>	-->
-<!--									</div>-->
-<!--								</div>-->
-<!--								<div class="col-md-4 portfolio-grids">-->
-<!--									<div class="grid effect-sarah">-->
-<!--										<a href="images/g2.jpg" class="swipebox" title="Lorem ipsum dolor sit amet, consectetur adipiscing elit. Duis maximus tortor diam, ac lobortis justo rutrum quis. Praesent non purus fermentum, eleifend velit non">-->
-<!--											<img src="images/g2.jpg" alt="" class="img-responsive" />-->
-<!--											<div class="figcaption">-->
-<!--												<h3>My<span> Project</span></h3>-->
-<!--												<p>莎拉喜欢看云。她很沮丧。</p>-->
-<!--											</div>-->
-<!--										</a>	-->
-<!--									</div>-->
-<!--								</div>-->
-<!--								<div class="col-md-4 portfolio-grids">-->
-<!--									<div class="grid">-->
-<!--										<a href="images/g3.jpg" class="swipebox" title="Lorem ipsum dolor sit amet, consectetur adipiscing elit. Duis maximus tortor diam, ac lobortis justo rutrum quis. Praesent non purus fermentum, eleifend velit non">-->
-<!--											<img src="images/g3.jpg" alt="" class="img-responsive" />-->
-<!--											<div class="figcaption">-->
-<!--												<h3>My<span> Project</span></h3>-->
-<!--												<p>莎拉喜欢看云。她很沮丧。</p>-->
-<!--											</div>-->
-<!--										</a>	-->
-<!--									</div>-->
-<!--								</div>-->
-<!--								<div class="col-md-4 portfolio-grids">-->
-<!--									<div class="grid">-->
-<!--										<a href="images/g4.jpg" class="swipebox" title="Lorem ipsum dolor sit amet, consectetur adipiscing elit. Duis maximus tortor diam, ac lobortis justo rutrum quis. Praesent non purus fermentum, eleifend velit non">-->
-<!--											<img src="images/g4.jpg" alt="" class="img-responsive" />-->
-<!--											<div class="figcaption">-->
-<!--												<h3>My<span> Project</span></h3>-->
-<!--												<p>莎拉喜欢看云。她很沮丧。</p>-->
-<!--											</div>-->
-<!--										</a>	-->
-<!--									</div>-->
-<!--								</div>-->
-<!--								-->
-<!--								<div class="col-md-4 portfolio-grids">-->
-<!--									<div class="grid">-->
-<!--										<a href="images/g11.jpg" class="swipebox" title="Lorem ipsum dolor sit amet, consectetur adipiscing elit. Duis maximus tortor diam, ac lobortis justo rutrum quis. Praesent non purus fermentum, eleifend velit non">-->
-<!--											<img src="images/g11.jpg" alt="" class="img-responsive" />-->
-<!--											<div class="figcaption">-->
-<!--												<h3>My<span> Project</span></h3>-->
-<!--												<p>莎拉喜欢看云。她很沮丧。</p>-->
-<!--											</div>-->
-<!--										</a>	-->
-<!--									</div>-->
-<!--								</div>-->
-<!--								<div class="col-md-4 portfolio-grids">-->
-<!--									<div class="grid">-->
-<!--										<a href="images/g6.jpg" class="swipebox" title="Lorem ipsum dolor sit amet, consectetur adipiscing elit. Duis maximus tortor diam, ac lobortis justo rutrum quis. Praesent non purus fermentum, eleifend velit non">-->
-<!--											<img src="images/g6.jpg" alt="" class="img-responsive" />-->
-<!--											<div class="figcaption">-->
-<!--												<h3>My<span> Project</span></h3>-->
-<!--												<p>莎拉喜欢看云。她很沮丧。</p>-->
-<!--											</div>-->
-<!--										</a>	-->
-<!--									</div>-->
-<!--								</div>-->
-<!--								<div class="col-md-4 portfolio-grids">-->
-<!--									<div class="grid">-->
-<!--										<a href="images/g7.jpg" class="swipebox" title="Lorem ipsum dolor sit amet, consectetur adipiscing elit. Duis maximus tortor diam, ac lobortis justo rutrum quis. Praesent non purus fermentum, eleifend velit non">-->
-<!--											<img src="images/g7.jpg" alt="" class="img-responsive" />-->
-<!--											<div class="figcaption">-->
-<!--												<h3>My<span> Project</span></h3>-->
-<!--												<p>莎拉喜欢看云。她很沮丧。</p>-->
-<!--											</div>-->
-<!--										</a>	-->
-<!--									</div>-->
-<!--								</div>-->
-<!--								<div class="col-md-4 portfolio-grids">-->
-<!--									<div class="grid">-->
-<!--										<a href="images/g8.jpg" class="swipebox" title="Lorem ipsum dolor sit amet, consectetur adipiscing elit. Duis maximus tortor diam, ac lobortis justo rutrum quis. Praesent non purus fermentum, eleifend velit non">-->
-<!--											<img src="images/g8.jpg" alt="" class="img-responsive" />-->
-<!--											<div class="figcaption">-->
-<!--												<h3>My<span> Project</span></h3>-->
-<!--												<p>莎拉喜欢看云。她很沮丧。</p>-->
-<!--											</div>-->
-<!--										</a>	-->
-<!--									</div>-->
-<!--								</div>-->
-<!--								<div class="col-md-4 portfolio-grids">-->
-<!--									<div class="grid">-->
-<!--										<a href="images/g9.jpg" class="swipebox" title="Lorem ipsum dolor sit amet, consectetur adipiscing elit. Duis maximus tortor diam, ac lobortis justo rutrum quis. Praesent non purus fermentum, eleifend velit non">-->
-<!--											<img src="images/g9.jpg" alt="" class="img-responsive" />-->
-<!--											<div class="figcaption">-->
-<!--												<h3>My<span> Project</span></h3>-->
-<!--												<p>莎拉喜欢看云。她很沮丧。</p>-->
-<!--											</div>-->
-<!--										</a>	-->
-<!--									</div>-->
-<!--								</div>-->
-<!--								<div class="col-md-4 portfolio-grids">-->
-<!--									<div class="grid">-->
-<!--										<a href="images/g10.jpg" class="swipebox" title="Lorem ipsum dolor sit amet, consectetur adipiscing elit. Duis maximus tortor diam, ac lobortis justo rutrum quis. Praesent non purus fermentum, eleifend velit non">-->
-<!--											<img src="images/g10.jpg" alt="" class="img-responsive" />-->
-<!--											<div class="figcaption">-->
-<!--												<h3>My<span> Project</span></h3>-->
-<!--												<p>莎拉喜欢看云。她很沮丧。</p>-->
-<!--											</div>-->
-<!--										</a>	-->
-<!--									</div>-->
-<!--								</div>-->
-<!--								-->
-<!--								<div class="col-md-4 portfolio-grids">-->
-<!--									<div class="grid">-->
-<!--										<a href="images/g5.jpg" class="swipebox" title="Lorem ipsum dolor sit amet, consectetur adipiscing elit. Duis maximus tortor diam, ac lobortis justo rutrum quis. Praesent non purus fermentum, eleifend velit non">-->
-<!--											<img src="images/g5.jpg" alt="" class="img-responsive" />-->
-<!--											<div class="figcaption">-->
-<!--												<h3>My<span> Project</span></h3>-->
-<!--												<p>莎拉喜欢看云。她很沮丧。</p>-->
-<!--											</div>-->
-<!--										</a>	-->
-<!--									</div>-->
-<!--								</div>-->
-<!--								<div class="col-md-4 portfolio-grids">-->
-<!--									<div class="grid">-->
-<!--										<a href="images/g12.jpg" class="swipebox" title="Lorem ipsum dolor sit amet, consectetur adipiscing elit. Duis maximus tortor diam, ac lobortis justo rutrum quis. Praesent non purus fermentum, eleifend velit non">-->
-<!--											<img src="images/g12.jpg" alt="" class="img-responsive" />-->
-<!--											<div class="figcaption">-->
-<!--												<h3>My<span> Project</span></h3>-->
-<!--												<p>莎拉喜欢看云。她很沮丧。</p>-->
-<!--											</div>-->
-<!--										</a>	-->
-<!--									</div>-->
-<!--								</div>-->
 
-
-
-<!--								<div class="clearfix"> </div>-->
-<!--							</div>-->
 						</div>
 						<div class="tab-1 resp-tab-content">
 							<div class="tab_img">
 								<div class="col-md-4 portfolio-grids">
 									<div class="grid">
-										<a href="images/g5.jpg" class="swipebox" title="Lorem ipsum dolor sit amet, consectetur adipiscing elit. Duis maximus tortor diam, ac lobortis justo rutrum quis. Praesent non purus fermentum, eleifend velit non">
-											<img src="images/g5.jpg" alt="" class="img-responsive" />
+										<a href="images/gree.jpg" class="swipebox" title="绿">
+											<img src="images/gree.jpg" alt="" class="img-responsive" />
 											<div class="figcaption">
 												<h3>My<span> Project</span></h3>
-												<p>莎拉喜欢看云。她很沮丧。</p>
+												<p>项目show</p>
 											</div>
 										</a>	
 									</div>
 								</div>
 								<div class="col-md-4 portfolio-grids">
 									<div class="grid">
-										<a href="images/g6.jpg" class="swipebox" title="Lorem ipsum dolor sit amet, consectetur adipiscing elit. Duis maximus tortor diam, ac lobortis justo rutrum quis. Praesent non purus fermentum, eleifend velit non">
-											<img src="images/g6.jpg" alt="" class="img-responsive" />
+										<a href="images/gree.jpg" class="swipebox" title="绿">
+											<img src="images/gree.jpg" alt="" class="img-responsive" />
 											<div class="figcaption">
 												<h3>My<span> Project</span></h3>
-												<p>莎拉喜欢看云。她很沮丧。</p>
+												<p>ashow</p>
 											</div>
 										</a>	
 									</div>
 								</div>
 								<div class="col-md-4 portfolio-grids">
 									<div class="grid">
-										<a href="images/g7.jpg" class="swipebox" title="Lorem ipsum dolor sit amet, consectetur adipiscing elit. Duis maximus tortor diam, ac lobortis justo rutrum quis. Praesent non purus fermentum, eleifend velit non">
-											<img src="images/g7.jpg" alt="" class="img-responsive" />
+										<a href="images/gree.jpg" class="swipebox" title="绿">
+											<img src="images/gree.jpg" alt="" class="img-responsive" />
 											<div class="figcaption">
 												<h3>My<span> Project</span></h3>
-												<p>莎拉喜欢看云。她很沮丧。</p>
+												<p>show</p>
 											</div>
 										</a>	
 									</div>
@@ -619,12 +493,12 @@
 					</div>
 					<div class="clearfix"></div>
 					<div class="contact-form">
-						<form action="/Viewer/addViewer.do" method="post">
-							<input type="text" name="vname" placeholder="Name，长度1-20"><!--<font color="red" th:errors="${viewer.vname}"></font>-->
-							<input class="email" name="vemail" type="text" placeholder="Email，长度1-30" ><!--<font color="red" th:errors="${viewer.vemail}"></font>-->
-							<input class="phone" name="vphone" type="text" placeholder="Phone，长度1-13" ><!--<font color="red" th:errors="${viewer.vphone}"></font>-->
-							<textarea name="vmessage" placeholder="Message，长度1-500" ></textarea><!--<font color="red" th:errors="${viewer.vmessage}"></font>-->
-							<input type="submit" value="提交" >
+						<form >
+							<input id="name" type="text" name="vname" placeholder="Name，长度1-20"><!--<font color="red" th:errors="${viewer.vname}"></font>-->
+							<input id="email" class="email" name="vemail" type="text" placeholder="Email，长度1-30" ><!--<font color="red" th:errors="${viewer.vemail}"></font>-->
+							<input id="phone" class="phone" name="vphone" type="text" placeholder="Phone，长度1-13" ><!--<font color="red" th:errors="${viewer.vphone}"></font>-->
+							<textarea id="msg" name="vmessage" placeholder="Message，长度1-500" ></textarea><!--<font color="red" th:errors="${viewer.vmessage}"></font>-->
+							<input style="margin: 0; padding: 0;height: 44px;width: 540px ;color:white;background-color : #008B8B " id="upto" type="button" value="提交" >
 						</form>
 					</div>
 				</div>
@@ -637,6 +511,7 @@
 	<div class="footer">
 		<div class="container">
 			<p>作者：HJR</a></p>
+			<a id="logout"  href="/User/logout" style="color: green"><li class=" li_a">退出登录</li></a>
 		</div>
 	</div>
 	<!--//footer-->
@@ -649,10 +524,13 @@
 				scrollSpeed: 1200,
 				easingType: 'linear' 
 			};
-			$().UItoTop({ easingType: 'easeOutQuart' });
+			// $().UItoTop({ easingType: 'easeOutQuart' });
 		});
-	</script>
 
+
+	</script>
+	<script src="/js/layer/layer.js"></script>
+	<script src="js/findex.js"></script>
 
 </body>
 </html>

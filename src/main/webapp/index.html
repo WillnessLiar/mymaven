@@ -8,27 +8,39 @@
     <script type="text/javascript" src="js/index.js"></script>
     <link rel="stylesheet" href="css/bootstrap.css">
     <link rel="stylesheet" href="css/index.css">
+    <link href="/css/asidenav.css" rel="stylesheet" type="text/css"><!悬浮帮助栏>
+    <script type="text/javascript" src="/js/asidenav.js"></script><!悬浮帮助栏>
 </head>
 <body>
 
-
+<div class="aside-nav bounceInUp animated" id="aside-nav">
+    <label  class="aside-menu" title="按住拖动">帮助</label>
+    <a href="findex.html" title="返回首页" class="menu-item menu-first">首页</a>
+    <a href="login.html" title="用户登录" class="menu-item menu-second">登录</a>
+    <a href="dynamic.html"  title="最近动态" class="menu-item menu-third">动态</a>
+    <a style="color: #64448f" title="跳转后台" class="menu-item menu-line menu-fourth">后台</a>
+</div>
 <div class="container-fluid">
     <div class=" text-center ld" id="ld">
         <div class="main_left" id="main_left"><!--main_left开始-->
             <h3 class="p1" style="width: 260px;">MENU</h3>
 
             <ul class="list-unstyled ">
-                <a class="a_daohang" id="a_home" target="rightFrame" href="show"><li class=" li_a">oo33</li></a>
+<!--                <a class="a_daohang" id="a_home" target="rightFrame" href="show"><li class=" li_a">oo33</li></a>-->
 
-                <a class="a_daohang" id="a_customer" href="templates/thymeleafDemo.html" target="rightFrame"><li class=" li_a">qq44</li></a>
+<!--                <a class="a_daohang" id="a_customer" href="templates/thymeleafDemo.html" target="rightFrame"><li class=" li_a">qq44</li></a>-->
 
-                <a class="a_daohang" id="a_comment" href="show3" target="rightFrame"><li class=" li_a">hh66</li></a>
+<!--                <a class="a_daohang" id="a_comment" href="show3" target="rightFrame"><li class=" li_a">hh66</li></a>-->
 
-                <a class="a_daohang" id="a_book"  href="User/findUserAll" target="rightFrame"><li class=" li_a">URL</li></a>
+                <a class="a_daohang" id="a_book"  href="User/findUserAll" target="rightFrame"><li class=" li_a">用户管理</li></a>
 
                 <a class="a_daohang" id="page2"  href="Viewer/findViewerAll" target="rightFrame"><li class=" li_a">消息查看</li></a>
 
                 <a class="a_daohang" id="findex"  href="http://localhost:8080/findex.html" style="color: green"><li class=" li_a">个人博客</li></a>
+
+                <a class="a_daohang" id="fileupload"  href="upload.html" style="color: green" target="rightFrame"><li class=" li_a">动态发布</li></a>
+
+                <a class="a_daohang" id="logout"  href="/User/logout" style="color: green"><li class=" li_a">退出登录</li></a>
             </ul>
         </div>
     </div>

@@ -1,0 +1,125 @@
+* {
+    padding: 0;
+    margin: 0;
+}
+
+.page {
+    width: 100%;
+    background-color: #f4f6f9;
+}
+
+.userInfo {
+    width: 100%;
+    height: 400px;
+    background-color: deepskyblue;
+    display: flex;
+    /*align-items: center;*/
+    /*justify-content: space-around;*/
+}
+
+.leftSide {
+    width: 40vw;
+    height: 100%;
+    display: flex;
+    align-items: center;
+    padding-left: 100px;
+}
+
+.userLogo {
+    width: 200px;
+    height: 200px;
+    border-radius: 7px;
+    background-color: #f4f6f9;
+}
+
+.useracount {
+    margin-left: 20px;
+    line-height: 40px;
+    height: 200px;
+}
+
+.acount {
+    font-size: 30px;
+    font-weight: 500;
+}
+
+.rightSide {
+    height: 100%;
+    width: 60vw;
+    display: flex;
+    align-items: center;
+}
+
+.info {
+    padding-left: 100px;
+    padding-right: 50px;
+    line-height: 30px;
+}
+
+
+/*图片块内容*/
+.down{
+    padding: 20px 20px;
+    background-color: #eeeeeb;
+}
+.picContent {
+    position: relative;
+    width: 100%;
+    /*background-color: #eeeeeb;*/
+}
+
+/*瀑布流组件*/
+.boxgrid {
+    /*width: 377px;*/
+    /*height: 227px;*/
+    overflow: hidden;
+    position: relative;
+}
+
+.item .boxgrid h3 {
+    margin: 10px 0px 10px 0px;
+    color: #FFF;
+    font: 24pt 微软雅黑, sans-serif;
+    letter-spacing: -1px;
+    font-weight: bold;
+    text-align: center;
+}
+
+.brand-list .item {
+    position: absolute;
+    /*width: 377px;*/
+    /*background: url(images/132.gif) no-repeat center center;*/
+    top: 0;
+    left: 40%;
+    -webkit-transition: all 0.3s;
+    -moz-transition: all 0.3s;
+    -o-transition: all 0.3s;
+    -ms-transition: all 0.3s;
+    transition: all 0.3s;
+}
+
+.picImage {
+    width: 300px;
+    height: 400px;
+}
+
+.pic {
+    width: 100%;
+    height: 100%;
+}
+
+.picBlock {
+    width: 300px;
+    background-color: #f4f6f9;
+    border-radius: 7px;
+    cursor: pointer;
+}
+.picBlock:hover{
+    box-shadow: gray 2px 2px 5px;
+}
+
+.picP {
+    line-height: 24px;
+    padding: 5px 10px;
+}
+
